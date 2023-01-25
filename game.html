@@ -1,0 +1,45 @@
+<!DOCTYE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+
+
+  var age=parseInt(prompt("enter the age")),
+  permission;
+
+  if(age>=16&&age<=50){
+
+    console.log("allow to play this game");
+
+  }
+
+  else if(age<16){
+
+      console.log("go and get permission from your parents");
+
+      permission=prompt("enter the permission for your child")
+
+      if(permission=="allowed"){
+ 
+         console.log("permission granted");
+
+      }
+
+      else{
+
+          console.log("sorry your are not allowed");
+
+      }
+
+  }
+
+  else{
+
+      console.log("not allowed");
+
+  }
+
+</script>
+</html>
