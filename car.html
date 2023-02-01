@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+class Car{
+
+    constructor(brand,model,power,milege){
+
+        this.brand=brand;
+
+        this.model=model;
+
+        this.power=power;
+
+        this.milege=milege;
+
+    }
+
+    get carDetail(){
+
+        console.log(`Brand name is ${this.brand} Model year${this.model} power ${this.power}hp milege ${this.milege}kmpl`);
+
+    }
+
+    set carname(brand1){
+
+           this.brand=brand1;
+
+        console.log(this.brand);
+
+    }
+
+}
+
+  let jeevCar=new Car("Toyato",2020,123,21);
+
+  let niviCar=new Car("Audi",2020,223,12);
+
+  let sithuCar=new Car("Marutisuzuki",2020,423,31);
+
+    jeevCar.carDetail;
+
+    niviCar.carDetail;
+
+    sithuCar.carDetail;
+
+    //set the new value
+ 
+  jeevCar.carname="Ford";
+
+    console.log(jeevCar);
+
+     jeevCar.carDetail;
+
+       let x="carDetail"
+;
+        jeevCar[x];    
+    
+</script>
+</body>
+</html>

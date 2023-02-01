@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+</html>
+<head>
+ <title> Descending order</title>
+</head>
+<body>
+<h4 style="text-align:center;">FIND DESCENDING ORDER</h4>
+<div style="text-align:center;" id="order"></div>
+<script>
+let p;
+let orderDes=document.getElementById("order"),
+    find=document.createElement("div"),
+    lab1=document.createElement("label").innerText="value1",
+    lab2=document.createElement("label").innerText="value2",
+    lab3=document.createElement("label").innerText="value3",
+    br1=document.createElement("br"),
+    br2=document.createElement("br"),
+    br3=document.createElement("br"),
+    br4=document.createElement("br"),
+    val1=document.createElement("input"),
+    val2=document.createElement("input"),
+    val3=document.createElement("input"),
+    btn=document.createElement("button"), 
+    resetBtn=document.createElement("input"),
+    display=document.createElement("p");
+         resetBtn.setAttribute("type","reset");
+         resetBtn.setAttribute("id","reset");         
+         btn.setAttribute("id","btn");
+         btn.innerText="Get Value";
+      val1.style.margin="10px";    
+      val2.style.margin="10px";      
+      val3.style.margin="10px";        
+      resetBtn.style.margin="10px 20px 0 0px";      
+      btn.style.margin="10px 50px 0 48px";
+      display.style.margin="20px 0px 0 40px";
+      display.style.padding="20px";
+      display.style.fontSize="20px";                
+    find.append(lab1,val1,br1,lab2,val2,br2,lab3,val3,br3,btn,resetBtn,br4,display); 
+    orderDes.appendChild(find);
+ let resetbutton=document.getElementById("reset");
+     resetbutton.addEventListener("click",()=>{val1.value="",val2.value="",val3.value="";})
+ let orderFind=document.getElementById("btn");
+    orderFind.addEventListener("click",()=>{
+  var a=parseInt(val1.value),b=parseInt(val2.value),c=parseInt(val3.value);
+    if(a>b){
+        if(a>c){
+          if(b>c){
+              console.log(a,b,c);
+               p=a+" "+b+" "+c
+               console.log(p);
+              display.innerText="Descending order is : "+p;
+          }
+        }
+        else{
+            console.log(c,a,b);
+               p=c+" "+a+" "+b
+               console.log(p);
+              display.innerText="Descending order is : "+p;
+        }
+    } 
+    else if(b>c){
+         if(c>a){
+             console.log(b,c,a);
+               p=b+" "+c+" "+a
+               console.log(p);
+              display.innerText="Descending order is : "+p;
+         }
+         else{
+             console.log(b,a,c);
+               p=b+" "+a+" "+c
+               console.log(p);
+              display.innerText="Descending order is : "+p;
+         }
+    }
+    else{
+        if(b>a){
+            console.log(c,b,a);
+               p=c+" "+b+" "+a
+               console.log(p);
+              display.innerText="Descending order is : "+p;
+        }
+        else{
+            console.log(c,a,b);
+               p=c+" "+a+" "+b
+               console.log(p);
+              display.innerText="Descending order is : "+p;      
+        }
+    }
+}) 
+</script>
+</body>
+</html>
